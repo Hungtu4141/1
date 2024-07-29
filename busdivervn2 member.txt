@@ -1,0 +1,129 @@
+local Fluent = loadstring(game:HttpGet("https://raw.githubusercontent.com/Hungtu4141/55556/main/Fluent.lua%20(1)%20(2).txt"))()
+
+local Window = Fluent:CreateWindow({
+    Title = "Lemon Cat Hub|_Libbi | ".. game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.. " ",
+    SubTitle = "| VERSION 2.0",
+    TabWidth = 95,
+    Size = UDim2.fromOffset(480, 280),
+    Acrylic = false,
+    Theme = "Darker",
+    MinimizeKey = Enum.KeyCode.F15
+})
+--   Dark   Light  Aqua Amethyst
+local Tabs = {
+    MainTab = Window:AddTab({ Title = "Spam/Car", Icon = "home" }),
+}
+
+    if game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") then
+        Fluent:Notify({
+            Title = "Elgato Hub | ✅ Working",
+            Content = v,
+            Duration = 7
+        })
+    else
+        Fluent:Notify({
+            Title = "Elgato Hub | ❎ Working",
+            Content = v,
+            Duration = 7
+        })
+    end
+end
+
+
+Tabs.MainTab:AddButton({
+        Title = "Spam Car Classic",
+        Callback = function()
+            Window:Dialog({
+                Title = "Hey😡",
+                Content = "Buy Premium",
+                Buttons = {
+                    {
+                        Title = "Cancel",
+                        Callback = function()
+                            print("Cancelled the dialog.")
+                        end
+                    }
+                }
+            })
+        end
+    })
+   
+   
+   
+Tabs.MainTab:AddButton({
+        Title = "Spam Car Classic",
+        Callback = function()
+            Window:Dialog({
+                Title = "Hey😡",
+                Content = "Buy Premium",
+                Buttons = {
+                    {
+                        Title = "Cancel",
+                        Callback = function()
+                            print("Cancelled the dialog.")
+                        end
+                    }
+                }
+            })
+        end
+    })
+   
+   
+   
+   Tabs.MainTab:AddButton({
+        Title = "Police Car",
+        Description = "",
+        Callback = function()
+            print("Cancelled the dialog.")
+            local player = game.Players.LocalPlayer
+        local playerGui = player:WaitForChild("PlayerGui")
+        local luxuryGui = playerGui:WaitForChild("Police")
+        local bgFrame = luxuryGui:WaitForChild("BG")
+        bgFrame.Visible = true
+        end
+   })
+   
+   
+   
+   Tabs.MainTab:AddButton({
+        Title = "Emergency",
+        Description = "",
+        Callback = function()
+            print("Cancelled the dialog.")
+            local player = game.Players.LocalPlayer
+        local playerGui = player:WaitForChild("PlayerGui")
+        local luxuryGui = playerGui:WaitForChild("emergency")
+        local bgFrame = luxuryGui:WaitForChild("BG")
+        bgFrame.Visible = true
+        end
+   })
+   
+   
+   --   Dark   Light  Aqua Amethyst
+local Tabs = {
+    MainTab = Window:AddTab({ Title = "Map/Ediet", Icon = "settings" }),
+}
+
+  
+Tabs.MainTab:AddButton({
+        Title = "FullBright",
+        Description = "",
+        Callback = function()
+            print("Cancelled the dialog.")
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/ttuws/Fullbright-/main/fullbright%20.txt"))()
+        end
+   })
+   
+   
+   
+Tabs.MainTab:AddButton({
+        Title = "Night",
+        Description = "",
+        Callback = function()
+            print("Cancelled the dialog.")
+            game.Lighting.ClockTime = 20
+        end
+   })
+   
+   
+   
