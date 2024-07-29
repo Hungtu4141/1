@@ -14,6 +14,9 @@ local Tabs = {
     MainTab = Window:AddTab({ Title = "Spam/Car", Icon = "home" }),
 }
 
+
+
+local function Notify(v)
     if game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") then
         Fluent:Notify({
             Title = "Elgato Hub | ✅ Working",
@@ -31,12 +34,20 @@ end
 
 
 Tabs.MainTab:AddButton({
-        Title = "Spam Car Classic",
+        Title = "Buy Premium | full ",
+        Description = "Bruh",
         Callback = function()
             Window:Dialog({
-                Title = "Hey😡",
-                Content = "Buy Premium",
+                Title = "Thông báo",
+                Content = "20k 1 tháng 50k 3 tháng rưỡi",
                 Buttons = {
+                    {
+                        Title = "Buy",
+                        Callback = function()
+                            print("Confirmed the dialog.")
+                            setclipboard("https://discord.com/invite/nrhGepFa")
+                        end
+                    },
                     {
                         Title = "Cancel",
                         Callback = function()
@@ -47,28 +58,8 @@ Tabs.MainTab:AddButton({
             })
         end
     })
-   
-   
-   
-Tabs.MainTab:AddButton({
-        Title = "Spam Car Classic",
-        Callback = function()
-            Window:Dialog({
-                Title = "Hey😡",
-                Content = "Buy Premium",
-                Buttons = {
-                    {
-                        Title = "Cancel",
-                        Callback = function()
-                            print("Cancelled the dialog.")
-                        end
-                    }
-                }
-            })
-        end
-    })
-   
-   
+    
+    
    
    Tabs.MainTab:AddButton({
         Title = "Police Car",
@@ -101,7 +92,7 @@ Tabs.MainTab:AddButton({
    
    --   Dark   Light  Aqua Amethyst
 local Tabs = {
-    MainTab = Window:AddTab({ Title = "Map/Ediet", Icon = "settings" }),
+    MainTab = Window:AddTab({ Title = "Map", Icon = "settings" }),
 }
 
   
@@ -125,5 +116,27 @@ Tabs.MainTab:AddButton({
         end
    })
    
+--   Dark   Light  Aqua Amethyst
+local Tabs = {
+    MainTab = Window:AddTab({ Title = "Spam/Car Free", Icon = "baby" }),
+}
    
-   
+--maintab
+  Tabs.MainTab:AddParagraph({
+    Title = "Spam",
+    Content = ""
+})
+
+Tabs.MainTab:AddButton({
+        Title = "Emergency",
+        Description = "",
+        Callback = function()
+            print("Cancelled the dialog.")
+            local player = game.Players.LocalPlayer
+        local playerGui = player:WaitForChild("PlayerGui")
+        local luxuryGui = playerGui:WaitForChild("Car")
+        local bgFrame = luxuryGui:WaitForChild("BG")
+        bgFrame.Visible = true
+        end
+   })
+
